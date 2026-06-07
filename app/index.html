@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lari — предзаказ мороженого боксами</title>
+  <meta name="description" content="Соберите заказ Lari боксами по 300 г. Мороженое без сахара и без лактозы. Минимальный заказ — 3 бокса, заказ становится частью партии." />
+  <meta name="theme-color" content="#1f9e8d" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" aria-label="Lari — на главную"><img class="logo-img" src="assets/lari-logo-dark.png" alt="Lari — полезное мороженое" width="120" height="64" /></a>
+      <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину"><span aria-hidden="true">🛒</span> Корзина <span class="cart-count" id="cartCount" hidden>0</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow"><span class="dot"></span>Предзаказ боксами</span>
+        <h1>Соберите свой заказ Lari</h1>
+        <p class="lead">Мороженое без сахара и без лактозы. Боксы по 300 г, блоки 1 кг или готовый ассорти — минимальный заказ 900 г. Заказ становится частью ближайшей партии; доставка по Санкт-Петербургу.</p>
+        <div class="batch">
+          <div class="batch-head"><span>Собираем партию</span><span class="b-kg" id="batchKg">5.4 / 8 кг</span></div>
+          <div class="batch-bar"><div class="batch-fill" id="batchFill" style="width:0"></div></div>
+          <p class="batch-note" id="batchNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Выберите вкусы</h2>
+          <p>Боксы 300 г, блок 1 кг одного вкуса или готовый ассорти (4×300 г). Состав — в карточке.</p>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img class="footer-logo" src="assets/lari-logo-light.png" alt="Lari" width="120" height="64" />
+      <p>Мороженое без сахара и без лактозы, четыре ботанических вкуса на двух основах. Семейный бренд, Санкт-Петербург.</p>
+      <p>Предоплата 100% · Доставка по Санкт-Петербургу в термобоксах · Замена при браке. Состав и аллергены (миндаль/орехи, молочный белок) — на упаковке. Контакт: <a href="mailto:sashalari@proton.me">sashalari@proton.me</a></p>
+    </div>
+  </footer>
+
+  <!-- CART -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Корзина">
+    <div class="cart-head"><h2>Корзина</h2><button class="icon-btn" id="cartClose" aria-label="Закрыть">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total">Итого <span id="cartTotal">0 ₽</span></div>
+      <p class="min-note warn" id="minNote">Минимальный заказ — 900 г.</p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Оформить предзаказ</button>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT -->
+  <div class="modal" id="checkoutModal" hidden>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Закрыть">×</button>
+      <h2>Оформление предзаказа</h2>
+      <form id="orderForm" novalidate>
+        <label>Имя*<input name="name" type="text" required autocomplete="name" /></label>
+        <label>Телефон или email*<input name="contact" type="text" required /></label>
+        <label>Город*<input name="city" type="text" required /></label>
+        <label>Адрес доставки*<input name="address" type="text" required /></label>
+        <label>Комментарий<textarea name="comment" rows="2"></textarea></label>
+        <div class="order-summary" id="orderSummary"></div>
+        <p class="pay-note">К оплате (предоплата 100%): <strong id="paySum">0 ₽</strong></p>
+        <button type="submit" class="btn btn-primary btn-block">Подтвердить предзаказ</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CONFIRM -->
+  <div class="modal" id="confirmModal" hidden>
+    <div class="modal-card center">
+      <div class="confirm-emoji" aria-hidden="true">🎉</div>
+      <h2>Предзаказ принят!</h2>
+      <p>Номер заказа: <strong id="orderNo"></strong></p>
+      <div id="confirmSummary"></div>
+      <p>Ваши боксы добавлены в текущую партию. Когда партия наберётся, мы свяжемся с вами, подтвердим детали и пришлём ссылку на оплату (предоплата 100%).</p>
+      <button class="btn btn-primary btn-block" data-close>Готово</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

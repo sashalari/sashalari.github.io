@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Редакторы
+.vscode/
+.idea/
+*.swp
+
+# Временное
+*.log
+Thumbs.db
