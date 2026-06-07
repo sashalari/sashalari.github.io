@@ -18,20 +18,20 @@ window.LARI = {
   ],
 
   // готовый ассорти-набор
-  assorti: { id: 'assorti', name: 'Ассорти-набор', sizeG: 1200, price: 1990, img: 'assets/assorti.png',
+  assorti: { id: 'assorti', name: 'Ассорти-набор', sizeG: 1200, price: 1990, img: 'assets/assorti.jpg',
              desc: 'По 300 г каждого из 4 вкусов (1.2 кг) — попробовать всю линейку.' },
 
   flavors: [
-    { id: 'vanilla',   name: 'Ванильное', img: 'assets/flavors/vanilla.png',
+    { id: 'vanilla',   name: 'Ванильное', img: 'assets/flavors/vanilla.jpg',
       desc: 'Мягкий ванильный вкус и кремовая текстура.',
       topping: 'Без ягодного топпинга — чистый вкус ванили.' },
-    { id: 'cowberry',  name: 'Брусника и саган-дайля', img: 'assets/flavors/cowberry.png',
+    { id: 'cowberry',  name: 'Брусника и саган-дайля', img: 'assets/flavors/cowberry.jpg',
       desc: 'Карельская брусника и таёжная нота саган-дайля.',
       topping: 'Ягоды брусники, саган-дайля; крахмал тапиоки, пектин NH, гуаровая камедь; аллюлоза, декстроза, стевия.' },
-    { id: 'raspberry', name: 'Малина и эстрагон с сосновыми шишками', img: 'assets/flavors/raspberry.png',
+    { id: 'raspberry', name: 'Малина и эстрагон с сосновыми шишками', img: 'assets/flavors/raspberry.jpg',
       desc: 'Малина, пряный эстрагон и смолистые сосновые шишки.',
       topping: 'Ягоды малины, эстрагон, сосновые шишки; крахмал тапиоки, пектин NH, гуаровая камедь; декстроза, стевия.' },
-    { id: 'currant',   name: 'Чёрная смородина с можжевельником', img: 'assets/flavors/currant.png',
+    { id: 'currant',   name: 'Чёрная смородина с можжевельником', img: 'assets/flavors/currant.jpg',
       desc: 'Насыщенная чёрная смородина и хвойный можжевельник.',
       topping: 'Ягоды чёрной смородины, можжевельника; гуаровая камедь, крахмал тапиоки; декстроза, стевия.' }
   ]
