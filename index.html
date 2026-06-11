@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lari — мороженое без сахара и без лактозы</title>
-  <meta name="description" content="Lari — мороженое без сахара и без лактозы на двух основах. Ботаническая линейка из четырёх вкусов. Готовим в Санкт-Петербурге, доставка по городу в термобоксах. Предзаказ." />
+  <title>Lari — домашнее мороженое без сахара и без лактозы</title>
+  <meta name="description" content="Lari — домашнее мороженое без сахара и без лактозы на двух основах. Ботаническая линейка из четырёх вкусов. Готовим в Санкт-Петербурге, доставка по городу в термобоксах. Предзаказ." />
   <meta name="theme-color" content="#1f9e8d" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:site_name" content="Lari" />
-  <meta property="og:title" content="Lari — мороженое без сахара и без лактозы" />
+  <meta property="og:title" content="Lari — домашнее мороженое без сахара и без лактозы" />
   <meta property="og:description" content="Ботаническая линейка из четырёх вкусов на двух основах. Десерт без компромиссов. Готовим в Санкт-Петербурге." />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Lari — мороженое без сахара и без лактозы" />
+  <meta property="twitter:title" content="Lari — домашнее мороженое без сахара и без лактозы" />
   <meta property="twitter:description" content="Ботаническая линейка из четырёх вкусов на двух основах. Десерт без компромиссов. Готовим в Санкт-Петербурге." />
   <meta property="twitter:image" content="https://lari-icecream.ru/assets/og-image.jpg" />
 
@@ -227,6 +227,14 @@
     .gallery figure:hover img{transform:scale(1.04);filter:brightness(.82);}
     .gallery figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-family:var(--head);font-style:italic;font-weight:300;font-size:.95rem;opacity:0;transition:opacity .3s ease;text-shadow:0 1px 4px rgba(0,0,0,.5);}
     .gallery figure:hover figcaption{opacity:1;}
+    /* Дегустации: показываем фото целиком, без обрезки лиц; подписи всегда видны */
+    #tastings .gallery{display:block;column-count:3;column-gap:10px;}
+    #tastings .gallery figure{break-inside:avoid;height:auto;margin:0 0 10px;border-radius:10px;}
+    #tastings .gallery figure.big{grid-column:auto;grid-row:auto;}
+    #tastings .gallery img{height:auto;min-height:0;object-fit:contain;}
+    #tastings .gallery figcaption{position:static;opacity:1;color:var(--graphite-soft);text-shadow:none;padding:8px 4px 0;font-size:.9rem;}
+    @media (max-width:900px){#tastings .gallery{column-count:2;}}
+    @media (max-width:560px){#tastings .gallery{column-count:1;}}
     .timeline{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;border-top:2px solid var(--mint);padding-top:24px;}
     .tl-node{flex:1 1 140px;position:relative;}
     .tl-node::before{content:"";position:absolute;top:-31px;left:0;width:12px;height:12px;border-radius:50%;background:var(--mint);}
@@ -300,6 +308,14 @@
     .footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:22px;font-size:.85rem;color:rgba(255,255,255,.7);}
     .footer-bottom a{color:#fff;font-weight:700;text-decoration:none;}
 
+    /* Audiences / who */
+    .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;}
+    .who-card{background:var(--snow);border:1px solid var(--hairline);border-radius:18px;padding:24px 22px;transition:transform .15s ease,box-shadow .15s ease;}
+    .who-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-photo);}
+    .who-ic{font-size:1.7rem;line-height:1;margin-bottom:10px;}
+    .who-card h3{font-size:1.1rem;margin-bottom:.3em;}
+    .who-card p{font-size:.94rem;margin:0;color:var(--graphite-soft);}
+
     /* Mobile sticky CTA */
     .mobile-cta{display:none;}
 
@@ -350,7 +366,7 @@
 
   <header class="site-header" id="header">
     <div class="wrap header-inner">
-      <a href="#top" aria-label="Lari — на главную"><img class="logo-img logo-dark" src="assets/lari-logo-dark.png" alt="Lari — мороженое без сахара и без лактозы" width="120" height="64" /><img class="logo-img logo-light" src="assets/lari-logo-light.png" alt="Lari — мороженое без сахара и без лактозы" width="120" height="64" /></a>
+      <a href="#top" aria-label="Lari — на главную"><img class="logo-img logo-dark" src="assets/lari-logo-dark.png" alt="Lari — домашнее мороженое без сахара и без лактозы" width="120" height="64" /><img class="logo-img logo-light" src="assets/lari-logo-light.png" alt="Lari — домашнее мороженое без сахара и без лактозы" width="120" height="64" /></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primaryNav">☰</button>
       <nav class="nav" id="primaryNav" aria-label="Основная навигация">
         <a class="navlink" href="#flavors">Вкусы</a>
@@ -371,8 +387,8 @@
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="wrap hero-content">
         <span class="eyebrow"><span class="dot"></span>Lari · Санкт-Петербург</span>
-        <h1>Десерт <span class="mint">без компромиссов</span></h1>
-        <p class="hero-sub">Мороженое без сахара и без лактозы.<br>Четыре ботанических вкуса на двух основах.</p>
+        <h1>Вкусно. <span class="mint">И можно.</span></h1>
+        <p class="hero-sub">Домашнее мороженое без сахара и без лактозы.<br>Две основы на выбор, ботаническая линейка вкусов.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#order">Оформить предзаказ — от 490 ₽</a>
           <a class="link-arrow" href="#flavors">Смотреть вкусы →</a>
@@ -385,13 +401,13 @@
     <section class="essence snow" id="essence">
       <span class="wm" aria-hidden="true">02</span>
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span>В чём суть</span><h2>Без компромиссов</h2></div>
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Коротко о Lari</span><h2>Без компромиссов</h2></div>
         <div class="essence-grid">
           <div class="col">
-            <p class="pullquote"><span class="dot"></span>Вкус настоящего мороженого — без сахара и без лактозы.</p>
+            <p class="pullquote"><span class="dot"></span>Настоящее мороженое. Просто без сахара и без лактозы.</p>
           </div>
           <div class="col">
-            <p>Lari остаётся настоящим мороженым. Без сахара и без лактозы, на двух основах, с продуманной ботанической линейкой вкусов.</p>
+            <p>Lari — домашнее мороженое из Петербурга. Без сахара и без лактозы, на двух основах, с продуманной ботанической линейкой вкусов.</p>
             <p>Небольшое крафтовое производство в Санкт-Петербурге, прозрачный состав и честный разговор о том, что внутри.</p>
           </div>
         </div>
@@ -411,11 +427,26 @@
     <section id="values">
       <span class="wm" aria-hidden="true">03</span>
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Три причины выбрать Lari</span><h2>Что важно знать</h2></div>
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Почему Lari</span><h2>Три причины полюбить</h2></div>
         <div class="values-grid">
-          <div class="value"><div class="num">01</div><h3>Без сахара и без лактозы</h3><p>Подходит при непереносимости лактозы и тем, кто отказался от сахара. Состав прозрачный — без мелкого шрифта.</p></div>
-          <div class="value"><div class="num">02</div><h3>Две основы на выбор</h3><p>Миндальная база и ванильная основа на коровьем молоке без лактозы. Разная текстура и характер — выбирайте, что вам ближе.</p></div>
-          <div class="value"><div class="num">03</div><h3>Вкусный десерт, а не «замена»</h3><p>Ботаническая линейка с натуральными травами и ягодами — удовольствие и чистый состав.</p></div>
+          <div class="value"><div class="num">01</div><h3>Без сахара и без лактозы</h3><p>Сахар не добавляем, лактозы нет. Если обычное мороженое вам не подходит — Lari подойдёт.</p></div>
+          <div class="value"><div class="num">02</div><h3>Две основы на выбор</h3><p>Миндальная — лёгкая и растительная. На молоке без лактозы — плотнее и сливочнее. Берите, что нравится.</p></div>
+          <div class="value"><div class="num">03</div><h3>Вкусно, а не «замена»</h3><p>Не диетическая замена, а настоящее мороженое. Травы и ягоды дают живой вкус.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCES / WHO -->
+    <section id="who">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Для кого</span><h2>Просто вкусное мороженое</h2><p class="lead">Главное — это вкусно. А ещё — без сахара и без лактозы, с честным составом.</p></div>
+        <div class="who-grid">
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🍦</div><h3>Любите мороженое</h3><p>Настоящее, сливочное, на травах и ягодах. Просто вкусно.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🧸</div><h3>Детям</h3><p>Сахар не добавляем. Можно угостить ребёнка и не переживать.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🌿</div><h3>Цените натуральное</h3><p>Честный короткий состав. Травы и ягоды вместо ароматизаторов.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🥛</div><h3>Без лактозы</h3><p>Делаем без лактозы — и при этом сливочно и вкусно.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🌱</div><h3>На растительном</h3><p>Есть миндальная основа, совсем без молока.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🧖</div><h3>После бани и спа</h3><p>Северные ягоды и травы. Хорошо после парной, к травяному чаю.</p></article>
         </div>
       </div>
     </section>
@@ -424,7 +455,7 @@
     <section id="flavors" class="snow">
       <span class="wm" aria-hidden="true">04</span>
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Четыре вкуса</span><h2>Ботаническая линейка</h2><p class="lead">Настоящие травы и ягоды — от классики до северных и хвойных нот.</p></div>
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Четыре вкуса</span><h2>Настоящее мороженое. Северный вкус.</h2><p class="lead">Мы оба выросли у северного леса — в Карелии и Коми, — и ягоды с травами нам родные. Так появилась ботаническая линейка: ягодная альтернатива яркому магазинному мороженому.</p></div>
         <div class="flavors-grid">
           <article class="flavor">
             <img class="flavor-img" src="assets/flavors/vanilla.jpg" alt="Ванильное мороженое Lari" loading="lazy" />
@@ -442,18 +473,19 @@
             <img class="flavor-img" src="assets/flavors/raspberry.jpg" alt="Мороженое Lari — малина и эстрагон с сосновыми шишками" loading="lazy" />
             <h3>Малина и эстрагон с сосновыми шишками</h3>
             <div class="plant">ягода + пряная трава + хвоя</div>
-            <p>Сладкая малина, пряный анисовый эстрагон и смолистый аккорд молодых сосновых шишек. Лесной аромат, который раскрывается постепенно.</p>
+            <p>Сладкая малина, пряный эстрагон и нота молодых сосновых шишек. Пахнет лесом — и раскрывается не сразу.</p>
           </article>
           <article class="flavor">
             <img class="flavor-img" src="assets/flavors/currant.jpg" alt="Мороженое Lari — чёрная смородина с можжевельником" loading="lazy" />
             <h3>Чёрная смородина с можжевеловыми шишками</h3>
             <div class="plant">тёмная ягода + можжевельник</div>
-            <p>Насыщенная чёрная смородина и хвойная, чуть бальзамическая нота можжевеловых шишек. Тёмный, взрослый вкус с характером.</p>
+            <p>Густая чёрная смородина и хвойная нота можжевельника. Тёмный, взрослый вкус с характером.</p>
           </article>
         </div>
 
         <div class="bases">
           <p>Все вкусы доступны на обеих основах — миндальной и на коровьем молоке без лактозы. Полный состав — в карточке товара.</p>
+          <div style="text-align:center;margin-top:26px;"><a class="btn btn-primary" href="app/index.html">Смотреть и заказать →</a></div>
         </div>
       </div>
     </section>
@@ -462,10 +494,11 @@
     <section class="story" id="story">
       <div class="story-band">
         <div class="story-inner">
-          <span class="eyebrow" style="color:#fff;"><span class="dot"></span>Наука и семья</span>
+          <span class="eyebrow" style="color:#fff;"><span class="dot"></span>Наша история</span>
           <p class="motto">«Лари создают красоту» — и теперь «Лари создают вкус».</p>
-          <h2>За вкусом стоит работа, а не случай</h2>
-          <p style="color:rgba(255,255,255,.9);max-width:60ch;">Рецептуру без сахара и без лактозы мы разрабатывали вместе с молодыми учёными Университета ИТМО — на технологическом конкурсе VDHAKATON24. Каждый вкус — результат экспериментов, а не догадок.</p>
+          <h2>Семья, Карелия и любовь к мороженому</h2>
+          <p style="color:rgba(255,255,255,.9);max-width:60ch;">Мы — Александра и Пётр Лари. Пётр проектирует скандинавские сады и вырос в Карелии, так что травы, ягоды и дары леса нам родные. Всей семьёй любим мороженое — вот и сделали своё. Когда готовим, представляем, что делаем для себя и близких.</p>
+          <p style="color:rgba(255,255,255,.9);max-width:60ch;">Полгода собирали рецепт с молодыми учёными ИТМО, дорабатывали с технологом — и получили четыре вкуса на северных ягодах и травах. Без сахара, но кремовое и настоящее, как любимый пломбир. А лактозу убрали совсем: многие наши близкие плохо переносят молочное, особенно на севере.</p>
           <div class="story-chips">
             <span class="chip">Разработано с учёными ИТМО</span>
             <span class="chip">Участник VDHAKATON24</span>
@@ -478,7 +511,7 @@
     <!-- TEAM & DEV -->
     <section id="team">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Команда и наука</span><h2>Как рождается рецептура</h2><p class="lead">Разрабатываем рецептуру с молодыми учёными Университета ИТМО — от образцов из лаборатории до дегустаций.</p></div>
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Команда и наука</span><h2>Как рождается рецептура</h2><p class="lead">Разрабатываем рецептуру с молодыми учёными Университета ИТМО — от первых образцов из лаборатории до дегустаций.</p></div>
         <div class="gallery">
           <figure><img src="assets/photos/team-vdhakaton.jpg" alt="Команда Lari на VDHAKATON24" loading="lazy" /><figcaption>Команда Lari</figcaption></figure>
           <figure><img src="assets/photos/team-banner.jpg" alt="Команда Lari у баннера VDHAKATON24" loading="lazy" /><figcaption>VDHAKATON24</figcaption></figure>
@@ -490,10 +523,11 @@
           <li><span class="ds-num">1</span><div><strong>VDHAKATON24</strong><p>Постановка задачи: разработать мороженое без лактозы и сахара, с витаминами и ботаническими вкусами.</p></div></li>
           <li><span class="ds-num">2</span><div><strong>Технологические карты с ИТМО</strong><p>Разработка первых технологических карт мороженого вместе с молодыми студентами-технологами Университета ИТМО (6 месяцев).</p></div></li>
           <li><span class="ds-num">3</span><div><strong>Первая дегустация</strong><p>Первая дегустация мороженого.</p><img class="ds-img" src="assets/photos/tasting-1.jpg" alt="Первая дегустация мороженого Lari" loading="lazy" /></div></li>
-          <li><span class="ds-num">4</span><div><strong>Ботаническая линейка</strong><p>Изменение рецептуры и формирование ботанической линейки вкусов на миндальном и коровьем молоке.</p></div></li>
+          <li><span class="ds-num">4</span><div><strong>Ботаническая линейка</strong><p>Изменение рецептуры и формирование ботанической линейки вкусов на миндальном и коровьем молоке. В рецептуре появились травы, сосновые шишки и мороженое с дикой малиной.</p></div></li>
           <li><span class="ds-num">5</span><div><strong>Открытые дегустации в СПб</strong><p>Серия открытых дегустаций мороженого в Санкт-Петербурге.</p></div></li>
           <li><span class="ds-num">6</span><div><strong>Лабораторное подтверждение</strong><p>Получение лабораторных подтверждений сохранения витаминов в мороженом после заморозки сырья.</p></div></li>
           <li><span class="ds-num">7</span><div><strong>Документы и разрешение на продажу</strong><p>Регистрация технологических карт и оформление декларации о соответствии — разрешения на продажу.</p></div></li>
+          <li><span class="ds-num">8</span><div><strong>Дегустации для кафе и ресторанов</strong><p>Проводим дегустации для кафе и ресторанов в Санкт-Петербурге и по России.</p></div></li>
         </ol>
       </div>
     </section>
@@ -553,11 +587,11 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow"><span class="dot"></span>Частые вопросы</span><h2>Коротко о главном</h2></div>
         <div class="faq-list">
-          <details class="faq-item"><summary>Почему предоплата 100%? <span class="pm">+</span></summary><div class="faq-body"><p>Мы выпускаем ограниченную партию и готовим её под подтверждённые заказы. Предоплата помогает спланировать производство и отправку. Срок изготовления и доставки виден при оформлении.</p></div></details>
-          <details class="faq-item"><summary>Не растает ли мороженое при доставке? <span class="pm">+</span></summary><div class="faq-body"><p>Доставляем по Санкт-Петербургу в термобоксах с хладагентами. Если мороженое всё же повредилось в пути — заменим партию за свой счёт.</p></div></details>
-          <details class="faq-item"><summary>Это правда без сахара и без лактозы? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Lari делается без добавленного сахара и без лактозы и подходит при непереносимости лактозы и тем, кто отказался от сахара. Полный состав каждого вкуса — на упаковке и в карточке заказа.</p></div></details>
-          <details class="faq-item"><summary>Чем отличаются две основы? <span class="pm">+</span></summary><div class="faq-body"><p>Классическая — на коровьем молоке без лактозы (плотнее и сливочнее). Растительная — на миндальной и кокосовой основе (легче). Каждый вкус доступен на любой основе.</p></div></details>
-          <details class="faq-item"><summary>Есть ли аллергены? <span class="pm">+</span></summary><div class="faq-body"><p>Да — см. блок об аллергенах ниже. Главное: миндальная основа содержит миндаль (орехи), а в ботанических вкусах используются травы и растительные ингредиенты.</p></div></details>
+          <details class="faq-item"><summary>Почему предоплата 100%? <span class="pm">+</span></summary><div class="faq-body"><p>Готовим небольшими партиями, под заказ. Предоплата помогает спланировать, сколько и когда сделать. Срок изготовления и доставки увидите при оформлении.</p></div></details>
+          <details class="faq-item"><summary>Не растает ли мороженое при доставке? <span class="pm">+</span></summary><div class="faq-body"><p>Везём по Петербургу в термобоксах с хладагентами. Если что-то случилось в пути — заменим за свой счёт, без лишних вопросов.</p></div></details>
+          <details class="faq-item"><summary>Это правда без сахара и без лактозы? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Сахар не добавляем, лактозы нет. Подходит при непереносимости лактозы и тем, кто отказался от сахара. Полный состав каждого вкуса — на упаковке и в карточке заказа.</p></div></details>
+          <details class="faq-item"><summary>Чем отличаются две основы? <span class="pm">+</span></summary><div class="faq-body"><p>Классическая — на молоке без лактозы, плотнее и сливочнее. Растительная — на миндале и кокосе, легче. Любой вкус есть на обеих.</p></div></details>
+          <details class="faq-item"><summary>Есть ли аллергены? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Миндальная основа содержит миндаль (орехи). В ботанических вкусах — травы и растительные ингредиенты. Подробности — в блоке об аллергенах ниже.</p></div></details>
         </div>
       </div>
     </section>
@@ -568,11 +602,11 @@
   <section id="partners">
     <span class="wm" aria-hidden="true">10</span>
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Партнёрам</span><h2>Lari для кафе и ресторанов</h2><p class="lead">Оптовые поставки в HoReCa: вёдра для подачи шариками, стабильное качество и мороженое без сахара и без лактозы — для гостей, которые читают составы. Партнёрам — доставка по всей России.</p></div>
+      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Партнёрам</span><h2>Lari для кафе и ресторанов</h2><p class="lead">Оптовые поставки в HoReCa: вёдра для подачи шариками, стабильное качество и мороженое без сахара и без лактозы — для гостей, которым важен состав. Партнёрам — доставка по всей России.</p></div>
       <div class="partner-grid">
-        <article class="partner-card"><div class="ic" aria-hidden="true">🍦</div><h3>Опт по кг</h3><p>Поставляем вёдрами для подачи шариками — выгодно заведению и стабильно нам.</p></article>
-        <article class="partner-card"><div class="ic" aria-hidden="true">🥄</div><h3>Образцы на дегустацию</h3><p>Пришлём образцы линейки, чтобы вы попробовали и выбрали вкусы для меню.</p></article>
-        <article class="partner-card"><div class="ic" aria-hidden="true">📄</div><h3>Прайс и презентация</h3><p>Отправим прайс-лист и презентацию бренда для вашей команды.</p></article>
+        <article class="partner-card"><div class="ic" aria-hidden="true">🍦</div><h3>Оптовая поставка по кг</h3><p>Поставляем вёдрами для подачи шариками — выгодно заведению и стабильно нам.</p></article>
+        <article class="partner-card"><div class="ic" aria-hidden="true">🥄</div><h3>Образцы на дегустацию</h3><p>Пришлём образцы — попробуете и выберете вкусы для меню.</p></article>
+        <article class="partner-card"><div class="ic" aria-hidden="true">📄</div><h3>Прайс и презентация</h3><p>Скинем прайс и короткую презентацию для вашей команды.</p></article>
       </div>
       <a class="btn btn-primary" href="mailto:sashalari@proton.me?subject=Сотрудничество%20Lari%20(HoReCa)&body=Здравствуйте!%20Хотим%20обсудить%20поставки%20Lari%20в%20наше%20заведение.%0A%0AЗаведение%3A%20%0AГород%3A%20%0AКонтакт%3A%20">Стать партнёром</a>
     </div>
@@ -581,9 +615,10 @@
   <!-- CONTACTS -->
   <section id="contacts" class="snow">
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим и поможем с заказом.</p></div>
+      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим и поможем с заказом. Больше ответов — в нашем Телеграм-боте.</p></div>
       <div class="contacts-grid">
         <a class="contact-item" href="mailto:sashalari@proton.me"><span aria-hidden="true">✉️</span> sashalari@proton.me</a>
+        <a class="contact-item" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener"><span aria-hidden="true">🤖</span> Телеграм-бот</a>
         <a class="contact-item" href="https://t.me/larifamily_icecream" target="_blank" rel="noopener"><span aria-hidden="true">✈️</span> Telegram-канал</a>
         <span class="contact-item"><span aria-hidden="true">📍</span> Санкт-Петербург</span>
       </div>
