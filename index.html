@@ -316,6 +316,15 @@
     .who-card h3{font-size:1.1rem;margin-bottom:.3em;}
     .who-card p{font-size:.94rem;margin:0;color:var(--graphite-soft);}
 
+    /* Reviews / testimonials */
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .review{margin:0;background:var(--snow);border:1px solid var(--hairline);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px;}
+    .review blockquote{margin:0;font-family:var(--head);font-weight:600;font-size:1.1rem;line-height:1.42;color:var(--graphite);}
+    .review figcaption{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--graphite-soft);margin-top:auto;}
+    .review .who-av{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--lilac-soft);color:var(--graphite);font-family:var(--head);font-weight:800;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;}
+    .review figcaption b{color:var(--graphite);font-weight:800;display:block;}
+    @media (max-width:900px){.reviews-grid{grid-template-columns:1fr;}}
+
     /* Mobile sticky CTA */
     .mobile-cta{display:none;}
 
@@ -547,6 +556,27 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Что говорят</span><h2>Отзывы с дегустаций</h2><p class="lead">Живые слова гостей — мы ничего не придумали.</p></div>
+        <div class="reviews-grid">
+          <figure class="review">
+            <blockquote>«Много всего попробовали — и нет тяжести, нет перенасыщения сладким. Всё очень в меру.»</blockquote>
+            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гость дегустации</b>пробовал всю линейку</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>«Думала — миндальное вообще не моё, только коровье. А тут мнение поменялось: растительное стало открытием.»</blockquote>
+            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гостья дегустации</b>любит молочное мороженое</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>«Я ем обычное мороженое, без ограничений. Но пломбир без лактозы — просто очень вкусный. Подтаял — и превратился в молочный коктейль, потрясающе.»</blockquote>
+            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гостья дегустации</b>ест обычное мороженое</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- HOW -->
     <section id="how" class="snow">
       <span class="wm" aria-hidden="true">07</span>
@@ -601,9 +631,9 @@
   <section id="partners">
     <span class="wm" aria-hidden="true">10</span>
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Партнёрам</span><h2>Lari для кафе и ресторанов</h2><p class="lead">Оптовые поставки в HoReCa: вёдра для подачи шариками, стабильное качество и мороженое без сахара и без лактозы — для гостей, которым важен состав. Партнёрам — доставка по всей России.</p></div>
+      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Партнёрам</span><h2>Lari для кафе и ресторанов</h2><p class="lead">Оптовые поставки в HoReCa: контейнеры для подачи шариками, стабильное качество и мороженое без сахара и без лактозы — для гостей, которым важен состав. Партнёрам — доставка по всей России.</p></div>
       <div class="partner-grid">
-        <article class="partner-card"><div class="ic" aria-hidden="true">🍦</div><h3>Оптовая поставка по кг</h3><p>Поставляем вёдрами для подачи шариками — выгодно заведению и стабильно нам.</p></article>
+        <article class="partner-card"><div class="ic" aria-hidden="true">🍦</div><h3>Оптовая поставка по кг</h3><p>Поставляем контейнерами для подачи шариками — выгодно заведению и стабильно нам.</p></article>
         <article class="partner-card"><div class="ic" aria-hidden="true">🥄</div><h3>Образцы на дегустацию</h3><p>Пришлём образцы — попробуете и выберете вкусы для меню.</p></article>
         <article class="partner-card"><div class="ic" aria-hidden="true">📄</div><h3>Прайс и презентация</h3><p>Скинем прайс и короткую презентацию для вашей команды.</p></article>
       </div>
@@ -616,6 +646,7 @@
     <div class="wrap">
       <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим и поможем с заказом. Больше ответов — в нашем Телеграм-боте.</p></div>
       <div class="contacts-grid">
+        <a class="contact-item" href="tel:+79613312857"><span aria-hidden="true">📞</span> +7 961 331 28 57 · Анастасия</a>
         <a class="contact-item" href="mailto:sashalari@proton.me"><span aria-hidden="true">✉️</span> sashalari@proton.me</a>
         <a class="contact-item" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener"><span aria-hidden="true">🤖</span> Телеграм-бот</a>
         <a class="contact-item" href="https://t.me/larifamily_icecream" target="_blank" rel="noopener"><span aria-hidden="true">✈️</span> Telegram-канал</a>
