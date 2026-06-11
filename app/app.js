@@ -58,7 +58,7 @@
       '<br><b>Миндальная основа:</b> ' + baseById('almond').comp + '</div>';
   }
   function baseRadios(name) {
-    return D.bases.map(function (b, i) { return '<label class="chip"><input type="radio" name="' + name + '" value="' + b.id + '"' + (i === 0 ? ' checked' : '') + '><span>' + b.short + '</span></label>'; }).join('');
+    return D.bases.map(function (b, i) { return '<label class="chip"><input type="radio" name="' + name + '" value="' + b.id + '"' + (i === 0 ? ' checked' : '') + '><span>' + b.pick + '</span></label>'; }).join('');
   }
   function qtyBox() {
     return '<div class="qty" data-qty><button type="button" class="q-btn" data-q="-1" aria-label="Меньше">−</button><span class="q-val">1</span><button type="button" class="q-btn" data-q="1" aria-label="Больше">+</button></div>';

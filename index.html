@@ -39,7 +39,6 @@
         "logo": "https://lari-icecream.ru/assets/lari-logo-dark.png",
         "image": "https://lari-icecream.ru/assets/og-image.jpg",
         "description": "Мороженое без сахара и без лактозы на двух основах (миндальной и на коровьем молоке без лактозы). Ботаническая линейка из четырёх вкусов. Санкт-Петербург.",
-        "email": "sashalari@proton.me",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Санкт-Петербург",
@@ -317,11 +316,11 @@
     .who-card p{font-size:.94rem;margin:0;color:var(--graphite-soft);}
 
     /* Reviews / testimonials */
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
     .review{margin:0;background:var(--snow);border:1px solid var(--hairline);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px;}
     .review blockquote{margin:0;font-family:var(--head);font-weight:600;font-size:1.1rem;line-height:1.42;color:var(--graphite);}
     .review figcaption{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--graphite-soft);margin-top:auto;}
-    .review .who-av{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--lilac-soft);color:var(--graphite);font-family:var(--head);font-weight:800;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;}
+    .review .who-av{flex:0 0 auto;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 28%;background:var(--lilac-soft);}
     .review figcaption b{color:var(--graphite);font-weight:800;display:block;}
     @media (max-width:900px){.reviews-grid{grid-template-columns:1fr;}}
 
@@ -456,6 +455,8 @@
           <article class="who-card"><div class="who-ic" aria-hidden="true">🥛</div><h3>Без лактозы</h3><p>Делаем без лактозы — и при этом сливочно и вкусно.</p></article>
           <article class="who-card"><div class="who-ic" aria-hidden="true">🌱</div><h3>На растительном</h3><p>Есть миндальная основа, совсем без молока.</p></article>
           <article class="who-card"><div class="who-ic" aria-hidden="true">🧖</div><h3>После бани и спа</h3><p>Северные ягоды и травы. Хорошо после парной, к травяному чаю.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">🎁</div><h3>В подарок</h3><p>Ассорти из четырёх вкусов — красиво подарить и удивить необычным.</p></article>
+          <article class="who-card"><div class="who-ic" aria-hidden="true">☕</div><h3>К кофе и чаю</h3><p>Десерт к спешелти-кофе или травяному чаю. Вкуснее, когда чуть подтает.</p></article>
         </div>
       </div>
     </section>
@@ -562,16 +563,20 @@
         <div class="section-head"><span class="eyebrow"><span class="dot"></span>Что говорят</span><h2>Отзывы с дегустаций</h2><p class="lead">Живые слова гостей — мы ничего не придумали.</p></div>
         <div class="reviews-grid">
           <figure class="review">
-            <blockquote>«Много всего попробовали — и нет тяжести, нет перенасыщения сладким. Всё очень в меру.»</blockquote>
-            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гость дегустации</b>пробовал всю линейку</span></figcaption>
+            <blockquote>«Я ем обычное мороженое, без ограничений. Но пломбир без лактозы — просто очень вкусный. Подтаял — и превратился в молочный коктейль.»</blockquote>
+            <figcaption><img class="who-av" src="assets/photos/reviews/r-turtleneck.jpg" alt="Гостья дегустации Lari" loading="lazy"><span><b>Гостья дегустации</b>ест обычное мороженое</span></figcaption>
           </figure>
           <figure class="review">
             <blockquote>«Думала — миндальное вообще не моё, только коровье. А тут мнение поменялось: растительное стало открытием.»</blockquote>
-            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гостья дегустации</b>любит молочное мороженое</span></figcaption>
+            <figcaption><img class="who-av" src="assets/photos/reviews/r-hoodie.jpg" alt="Гостья дегустации Lari" loading="lazy"><span><b>Гостья дегустации</b>любит молочное мороженое</span></figcaption>
           </figure>
           <figure class="review">
-            <blockquote>«Я ем обычное мороженое, без ограничений. Но пломбир без лактозы — просто очень вкусный. Подтаял — и превратился в молочный коктейль, потрясающе.»</blockquote>
-            <figcaption><span class="who-av" aria-hidden="true">“</span><span><b>Гостья дегустации</b>ест обычное мороженое</span></figcaption>
+            <blockquote>«Все вкусы по-своему интересные. Сладость в меру, а с добавками — кислинка и яркость. Обычное мороженое после этого кажется просто обычным.»</blockquote>
+            <figcaption><img class="who-av" src="assets/photos/reviews/r-young.jpg" alt="Гостья дегустации Lari" loading="lazy"><span><b>Гостья дегустации</b>любит яркие вкусы</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>«На безлактозном с чёрной смородиной — насыщенный, ароматный, пряный вкус. Из всех видов для меня самый классный.»</blockquote>
+            <figcaption><img class="who-av" src="assets/photos/reviews/r-duo.jpg" alt="Гостьи дегустации Lari" loading="lazy" style="object-position:50% 22%"><span><b>Гостьи дегустации</b>выбирали фавориты</span></figcaption>
           </figure>
         </div>
       </div>
@@ -637,7 +642,7 @@
         <article class="partner-card"><div class="ic" aria-hidden="true">🥄</div><h3>Образцы на дегустацию</h3><p>Пришлём образцы — попробуете и выберете вкусы для меню.</p></article>
         <article class="partner-card"><div class="ic" aria-hidden="true">📄</div><h3>Прайс и презентация</h3><p>Скинем прайс и короткую презентацию для вашей команды.</p></article>
       </div>
-      <a class="btn btn-primary" href="mailto:sashalari@proton.me?subject=Сотрудничество%20Lari%20(HoReCa)&body=Здравствуйте!%20Хотим%20обсудить%20поставки%20Lari%20в%20наше%20заведение.%0A%0AЗаведение%3A%20%0AГород%3A%20%0AКонтакт%3A%20">Стать партнёром</a>
+      <a class="btn btn-primary" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener">Стать партнёром</a>
     </div>
   </section>
 
@@ -647,7 +652,6 @@
       <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим и поможем с заказом. Больше ответов — в нашем Телеграм-боте.</p></div>
       <div class="contacts-grid">
         <a class="contact-item" href="tel:+79613312857"><span aria-hidden="true">📞</span> +7 961 331 28 57 · Анастасия</a>
-        <a class="contact-item" href="mailto:sashalari@proton.me"><span aria-hidden="true">✉️</span> sashalari@proton.me</a>
         <a class="contact-item" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener"><span aria-hidden="true">🤖</span> Телеграм-бот</a>
         <a class="contact-item" href="https://t.me/larifamily_icecream" target="_blank" rel="noopener"><span aria-hidden="true">✈️</span> Telegram-канал</a>
         <span class="contact-item"><span aria-hidden="true">📍</span> Санкт-Петербург</span>
