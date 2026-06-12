@@ -13,8 +13,9 @@ window.LARI = {
 
   // форматы для одного вкуса
   formats: [
-    { id: 'box',   name: 'Бокс 300 г', sizeG: 300,  price: 490 },
-    { id: 'block', name: 'Блок 1 кг',  sizeG: 1000, price: 1490 }
+    { id: 'box',    name: 'Бокс 300 г', sizeG: 300,  price: 490 },
+    { id: 'box500', name: 'Бокс 500 г', sizeG: 500,  price: 790 },
+    { id: 'block',  name: 'Блок 1 кг',  sizeG: 1000, price: 1490 }
   ],
 
   // готовый ассорти-набор

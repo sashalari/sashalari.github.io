@@ -68,7 +68,7 @@
       var fmts = D.formats.map(function (fm, i) { return '<label class="chip"><input type="radio" name="fmt-' + f.id + '" value="' + fm.id + '"' + (i === 0 ? ' checked' : '') + '><span>' + fm.name + ' · ' + rub(fm.price) + '</span></label>'; }).join('');
       return '<article class="prod" data-flavor="' + f.id + '">' +
         '<img class="prod-img" src="' + f.img + '" alt="' + f.name + ' — Lari" loading="lazy" />' +
-        '<div class="prod-body"><h3>' + f.name + '</h3><p class="prod-desc">' + f.desc + '</p>' +
+        '<div class="prod-body"><h3>' + f.name + '</h3><span class="stock">✓ В наличии</span><p class="prod-desc">' + f.desc + '</p>' +
           '<div class="base-pick" role="group" aria-label="Основа">' + baseRadios('base-' + f.id) + '</div>' +
           '<div class="base-pick" role="group" aria-label="Формат">' + fmts + '</div>' +
           '<details class="comp"><summary>Состав</summary>' + compBody('<b>Ягодная часть:</b> ' + f.topping) + '</details>' +
