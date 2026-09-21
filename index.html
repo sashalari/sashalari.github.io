@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lari — домашнее мороженое без сахара и без лактозы</title>
-  <meta name="description" content="Lari — домашнее мороженое без сахара и без лактозы на двух основах. Ботаническая линейка из четырёх вкусов. Готовим в Санкт-Петербурге, доставка по городу в термобоксах. Предзаказ." />
+  <meta name="description" content="Lari — домашнее мороженое без сахара и без лактозы на двух основах. Ботаническая линейка из четырёх вкусов. Готовим в Санкт-Петербурге небольшими партиями." />
   <meta name="theme-color" content="#1f9e8d" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
@@ -261,6 +261,8 @@
     .order-panel h2{color:var(--white);}
     .order-panel .lead{color:rgba(255,255,255,.92);margin:0 auto;}
     .tariffs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch;max-width:860px;margin:30px auto 24px;text-align:left;}
+    .avail-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:28px 0 18px;}
+    .avail-links .btn{margin:0;}
     .tariff{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:24px;}
     .tariff.featured{background:var(--white);color:var(--graphite);border:none;padding:30px;position:relative;box-shadow:0 16px 40px rgba(0,0,0,.18);}
     .tariff .name{font-weight:700;margin-bottom:6px;}
@@ -380,10 +382,9 @@
       <nav class="nav" id="primaryNav" aria-label="Основная навигация">
         <a class="navlink" href="#flavors">Вкусы</a>
         <a class="navlink" href="#story">О бренде</a>
-        <a class="navlink" href="#how">Как заказать</a>
-        <a class="navlink" href="#partners">Партнёрам</a>
+        <a class="navlink" href="#how">Как попробовать</a>
         <a class="navlink" href="#contacts">Контакты</a>
-        <a class="btn btn-primary" href="#order" style="padding:11px 22px;">Оформить предзаказ</a>
+        <a class="btn btn-primary" href="#availability" style="padding:11px 22px;">Узнать о наличии</a>
       </nav>
     </div>
   </header>
@@ -399,10 +400,10 @@
         <h1>Десерт <span class="mint">без компромиссов</span></h1>
         <p class="hero-sub">Мороженое без сахара и без лактозы.<br>Четыре ботанических вкуса на двух основах.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#order">Оформить предзаказ — от 490 ₽</a>
+          <a class="btn btn-primary" href="#availability">Узнать о наличии</a>
           <a class="link-arrow" href="#flavors">Смотреть вкусы →</a>
         </div>
-        <p class="scarce">Ограниченная партия — готовим под подтверждённые заказы.</p>
+        <p class="scarce">Готовим небольшими партиями.</p>
       </div>
     </section>
 
@@ -495,8 +496,8 @@
         </div>
 
         <div class="bases">
-          <p>Все вкусы доступны на обеих основах — миндальной и на коровьем молоке без лактозы. Полный состав — в карточке товара.</p>
-          <div style="text-align:center;margin-top:26px;"><a class="btn btn-primary" href="app/index.html">Смотреть и заказать →</a></div>
+          <p>Все вкусы доступны на обеих основах — миндальной и на коровьем молоке без лактозы. Полный состав — на упаковке.</p>
+          <div style="text-align:center;margin-top:26px;"><a class="btn btn-primary" href="#availability">Узнать о наличии</a></div>
         </div>
       </div>
     </section>
@@ -596,31 +597,30 @@
     <section id="how" class="snow">
       <span class="wm" aria-hidden="true">07</span>
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Как заказать</span><h2>Готовим мороженое на заказ</h2></div>
+        <div class="section-head"><span class="eyebrow"><span class="dot"></span>Как попробовать</span><h2>Готовим небольшими партиями</h2></div>
         <div class="steps">
           <div class="step"><div class="num">01</div><h3>Выберите вкусы и основу</h3><p>Любимые вкусы и основу (миндальную или на коровьем молоке без лактозы). Можно собрать набор из четырёх вкусов.</p></div>
-          <div class="step"><div class="num">02</div><h3>Оформите и оплатите 100%</h3><p>Предоплата при оформлении — так мы понимаем спрос и готовим партию под заказы.</p></div>
-          <div class="step"><div class="num">03</div><h3>Мы готовим и отправляем</h3><p>Доставка по Санкт-Петербургу курьером в термобоксах с хладагентами.</p></div>
+          <div class="step"><div class="num">02</div><h3>Напишите нам</h3><p>Расскажем, какие вкусы есть сейчас, и ответим на вопросы о составе.</p></div>
+          <div class="step"><div class="num">03</div><h3>Договоримся о деталях</h3><p>Обсудим удобное время и способ передачи — по Санкт-Петербургу возим в термобоксах.</p></div>
         </div>
-        <div class="facts-row"><span>Предоплата 100%</span><span class="sep"></span><span>Доставка по Санкт-Петербургу</span></div>
-        <a class="btn btn-primary" href="#order">Оформить предзаказ</a>
+        <div class="facts-row"><span>Небольшие партии</span><span class="sep"></span><span>Санкт-Петербург</span></div>
+        <a class="btn btn-primary" href="#availability">Узнать о наличии</a>
       </div>
     </section>
 
     <!-- ORDER -->
-    <section id="order">
+    <section id="availability">
       <div class="wrap">
         <div class="order-panel">
-          <span class="eyebrow" style="color:#fff;justify-content:center;"><span class="dot" style="background:#fff;"></span>Ограниченная партия · по предзаказу</span>
-          <h2>Закажите десерт без компромиссов</h2>
-          <p class="lead">Боксы 300 г, блок 1 кг или готовый ассорти. Минимальный заказ — 900 г, доставка по Санкт-Петербургу.</p>
-          <div class="tariffs">
-            <div class="tariff"><div class="name">Бокс 300 г</div><div class="amount">490 ₽</div><p class="sub">Один вкус на выбранной основе.</p></div>
-            <div class="tariff"><div class="name">Блок 1 кг</div><div class="amount">1 490 ₽</div><p class="sub">Один вкус, большой формат — выгоднее за грамм.</p></div>
-            <div class="tariff featured"><span class="ribbon">Хит</span><div class="name">Ассорти 4×300 г</div><div class="amount">1 990 ₽</div><p class="sub">По 300 г каждого вкуса — вся линейка.</p></div>
+          <span class="eyebrow" style="color:#fff;justify-content:center;"><span class="dot" style="background:#fff;"></span>Наличие и вопросы</span>
+          <h2>Узнать о наличии</h2>
+          <p class="lead">Готовим небольшими партиями. Напишите или позвоните — расскажем, какие вкусы есть сейчас, из чего они сделаны и как их попробовать.</p>
+          <div class="avail-links">
+            <a class="btn btn-white" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener">Написать в телеграм</a>
+            <a class="btn btn-white" href="tel:+79613312857">+7 961 331 28 57</a>
+            <a class="btn btn-white" href="mailto:lari.cream@alabspace.ru">lari.cream@alabspace.ru</a>
           </div>
-          <a class="btn btn-white" href="app/index.html">Перейти к заказу</a>
-          <p class="guarantee">Предоплата 100% · Доставка по Санкт-Петербургу.</p>
+          <p class="guarantee">Анастасия&nbsp;Пастухова · <span style="white-space:nowrap">Санкт-Петербург</span></p>
         </div>
       </div>
     </section>
@@ -631,9 +631,8 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow"><span class="dot"></span>Частые вопросы</span><h2>Коротко о главном</h2></div>
         <div class="faq-list">
-          <details class="faq-item"><summary>Почему предоплата 100%? <span class="pm">+</span></summary><div class="faq-body"><p>Готовим небольшими партиями, под заказ. Предоплата помогает спланировать, сколько и когда сделать. Срок изготовления и доставки увидите при оформлении.</p></div></details>
-          <details class="faq-item"><summary>Не растает ли мороженое при доставке? <span class="pm">+</span></summary><div class="faq-body"><p>Везём по Петербургу в термобоксах с хладагентами — чтобы мороженое доехало холодным.</p></div></details>
-          <details class="faq-item"><summary>Это правда без сахара и без лактозы? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Сахар не добавляем, лактозы нет. Подходит при непереносимости лактозы и тем, кто отказался от сахара. Полный состав каждого вкуса — на упаковке и в карточке заказа.</p></div></details>
+          <details class="faq-item"><summary>Как мороженое остаётся холодным? <span class="pm">+</span></summary><div class="faq-body"><p>Храним и перевозим в термобоксах с хладагентами — мороженое не теряет текстуру.</p></div></details>
+          <details class="faq-item"><summary>Это правда без сахара и без лактозы? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Сахар не добавляем, лактозы нет. Полный состав каждого вкуса — на упаковке.</p></div></details>
           <details class="faq-item"><summary>Чем отличаются две основы? <span class="pm">+</span></summary><div class="faq-body"><p>Классическая — на молоке без лактозы, плотнее и сливочнее. Растительная — на миндале и кокосе, легче. Любой вкус есть на обеих.</p></div></details>
           <details class="faq-item"><summary>Есть ли аллергены? <span class="pm">+</span></summary><div class="faq-body"><p>Да. Миндальная основа содержит миндаль (орехи). В ботанических вкусах — травы и растительные ингредиенты. Подробности — в блоке об аллергенах ниже.</p></div></details>
         </div>
@@ -642,26 +641,13 @@
 
   </main>
 
-  <!-- PARTNERS -->
-  <section id="partners">
-    <span class="wm" aria-hidden="true">10</span>
-    <div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Партнёрам</span><h2>Lari для кафе и ресторанов</h2><p class="lead">Оптовые поставки в HoReCa: контейнеры для подачи шариками, стабильное качество и мороженое без сахара и без лактозы — для гостей, которым важен состав. Партнёрам — доставка по всей России.</p></div>
-      <div class="partner-grid">
-        <article class="partner-card"><div class="ic" aria-hidden="true">🍦</div><h3>Оптовая поставка по кг</h3><p>Поставляем контейнерами для подачи шариками — выгодно заведению и стабильно нам.</p></article>
-        <article class="partner-card"><div class="ic" aria-hidden="true">🥄</div><h3>Образцы на дегустацию</h3><p>Пришлём образцы — попробуете и выберете вкусы для меню.</p></article>
-        <article class="partner-card"><div class="ic" aria-hidden="true">📄</div><h3>Прайс и презентация</h3><p>Скинем прайс и короткую презентацию для вашей команды.</p></article>
-      </div>
-      <a class="btn btn-primary" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener">Стать партнёром</a>
-    </div>
-  </section>
-
   <!-- CONTACTS -->
   <section id="contacts" class="snow">
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим и поможем с заказом. Больше ответов — в нашем Телеграм-боте.</p></div>
+      <div class="section-head"><span class="eyebrow"><span class="dot"></span>Контакты</span><h2>Свяжитесь с нами</h2><p class="lead">Семейный бренд Lari, Санкт-Петербург. Напишите — ответим на вопросы о вкусах и составе. Больше ответов — в нашем Телеграм-боте.</p></div>
       <div class="contacts-grid">
-        <a class="contact-item" href="tel:+79613312857"><span aria-hidden="true">📞</span> +7 961 331 28 57 · Анастасия</a>
+        <a class="contact-item" href="tel:+79613312857"><span aria-hidden="true">📞</span> +7 961 331 28 57 · Анастасия Пастухова</a>
+        <a class="contact-item" href="mailto:lari.cream@alabspace.ru"><span aria-hidden="true">✉️</span> lari.cream@alabspace.ru</a>
         <a class="contact-item" href="https://t.me/lari_cream_bot" target="_blank" rel="noopener"><span aria-hidden="true">🤖</span> Телеграм-бот</a>
         <a class="contact-item" href="https://t.me/larifamily_icecream" target="_blank" rel="noopener"><span aria-hidden="true">✈️</span> Telegram-канал</a>
         <span class="contact-item"><span aria-hidden="true">📍</span> Санкт-Петербург</span>
@@ -682,18 +668,18 @@
           <ul class="allergens">
             <li>Миндальная основа содержит миндаль (древесные орехи). Не подходит при аллергии на орехи.</li>
             <li>Основа на коровьем молоке производится без лактозы, но содержит молочный белок.</li>
-            <li>Полный состав и рекомендации по употреблению указаны на упаковке и в карточке товара.</li>
+            <li>Полный состав и рекомендации по употреблению указаны на упаковке.</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 Lari. Все права защищены.</span>
-        <a href="#order">Оформить предзаказ</a>
+        <a href="#availability">Узнать о наличии</a>
       </div>
     </div>
   </footer>
 
-  <a class="mobile-cta" href="#order">Оформить предзаказ — от 490 ₽</a>
+  <a class="mobile-cta" href="#availability">Узнать о наличии</a>
 
   <script>
     // Header scroll state
